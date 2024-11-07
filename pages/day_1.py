@@ -3,6 +3,7 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 
+st.title("Fused 30 Days - Day 1")
 
 @st.cache_data
 def load_data(n):
