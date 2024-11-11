@@ -2,7 +2,6 @@ import streamlit as st
 import pandas as pd
 import fused
 
-st.set_page_config(page_title="Fused 30 Days #4: Hexagons", page_icon="⬡")
 st.sidebar.header("Day 4 - Hexagons")
 
 st.title("🖼️ Hexify any image!")

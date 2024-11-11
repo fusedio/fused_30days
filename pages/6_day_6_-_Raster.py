@@ -2,7 +2,6 @@ import streamlit as st
 import asyncio
 
 # st.set_page_config(page_title="NAIP - areas with high NDVI")
-st.set_page_config(page_title="Fused 30 Days #6: Raster", page_icon="🗾")
 st.sidebar.header("Day 6 - Raster")
 
 st.title("NAIP - areas with high NDVI")
