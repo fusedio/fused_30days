@@ -18,7 +18,12 @@ st.markdown(
     them through HTTP endpoints. 
 
     This page is a little demo of all the maps we & the community have built using Fused during the [2024 #30DayMapChallenge](https://30daymapchallenge.com/)
+    
+    ### Try these out!
 
+    👈 You can explore each of these apps yourself. You can inspect the code for each one of those 
+
+    🚧 We'll add a video on how to do this soon, stay tuned 🚧
 
     ### Want to learn more?
     - Check out [our docs](https://docs.fused.io/)
