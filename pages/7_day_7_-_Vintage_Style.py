@@ -2,6 +2,9 @@
 
 import streamlit as st
 
+st.set_page_config(page_title="Fused 30 Days #7: Vintage Map", page_icon="⚪️")
+st.sidebar.header("Day 7 - Vintage Map")
+
 # Display title and subtitle information
 st.title("Frodo and Sam's Journey")
 

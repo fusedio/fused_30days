@@ -2,6 +2,9 @@
 
 import streamlit as st
 
+st.set_page_config(page_title="Fused 30 Days #5: A Journey", page_icon="⚪️")
+st.sidebar.header("Day 5 - A Journey")
+
 # Display title and subtitle information
 st.title("British Trans-Arctic Expedition")
 
