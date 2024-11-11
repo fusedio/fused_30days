@@ -1,8 +1,6 @@
 import streamlit as st
-
 import pandas as pd
 import fused
-import micropip
 
 
 st.title("🖼️ Hexify any image!")
@@ -20,7 +18,15 @@ image_url = st.text_input('URL of image to Hexify:', value="https://fused-magic.
 df = fused.run('UDF_Hexify_Image', path=image_url, res=h3_res)
 df['hex'] = df['hex'].apply(lambda x: hex(x)[2:].lower())
 
-await micropip.install(['pydeck'])
+import asyncio
+async def install_micro_async():
+    try:
+        import micropip
+        await micropip.install("pydeck")
+        return 'w/ micro'
+    except ImportError:
+        return 'w/o micro'
+a = asyncio.run(install_micro_async())
 import pydeck as pdk
 
 # Define a layer to display on a map
