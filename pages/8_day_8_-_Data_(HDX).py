@@ -12,7 +12,11 @@ async def install_micro_async():
     except ImportError:
         return 'w/o micro'
 # run_async_task(install_micro_async())
-a = asyncio.run(install_micro_async())
+try:
+    a = asyncio.run(install_micro_async())
+except RuntimeError:
+    print("Didn't run async")
+    pass
 
 import geopandas
 import folium
