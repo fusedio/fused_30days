@@ -29,7 +29,7 @@ initial_deck = pdk.Deck(
     map_style='mapbox://styles/mapbox/light-v9'
 )
 
-radius_km = st.slider('Buffer radius (1/100th degree)', 0.1, 100.0, 5.0, 0.1)
+radius_km = st.slider('Buffer radius (1/100th degree)', 0.1, 100.0, 1.0, 0.1)
 
 # Initiate geojson
 point_geojson = {

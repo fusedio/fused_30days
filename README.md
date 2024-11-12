@@ -12,6 +12,7 @@ This is a collection of [Fused apps](https://docs.fused.io/workbench/app-builder
 <!-- https://www.fused.io/workbench/apps#app/s/i/fa_Akz4GrgWkgQ3zvEeDfTo7 -->
 <!-- https://www.fused.io/workbench/apps#app/s/i/fa_7d9aS3OtKkmzrNmr4doMb8 -->
 <!-- https://www.fused.io/workbench/apps#app/s/i/fa_1m1aTJWfhJ0ABUADrOnFJV -->
+<!-- https://www.fused.io/workbench/apps#app/s/i/fa_4YDXXIzi09WyXfbrwakBhR -->
 You can explore this from your browser [right here](https://www.fused.io/workbench/apps#app/s/i/fa_2bv4fVJBhl34Zy0qcCE3X6)!
 
 <!-- Would be nice to add a video once the Fused app is live? -->
