@@ -22,7 +22,6 @@ import geopandas
 import folium
 from streamlit_folium import st_folium
 
-st.set_page_config(page_title="Fused 30 Days #8: Data (HDX)", page_icon="⚪️")
 st.sidebar.header("Day 8 - Data (HDX)")
 st.title("2021 Humanitarian Developlment Index per country")
 st.markdown(
