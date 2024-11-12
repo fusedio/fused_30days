@@ -3,6 +3,38 @@ import streamlit as st
 import asyncio
 from requests.models import PreparedRequest
 
+# Copied straight from here: https://discuss.streamlit.io/t/issues-with-asyncio-and-streamlit-event-bound-to-a-different-event-loop/66976
+def run_async_task(async_func, *args):
+    """
+    Run an asynchronous function in a new event loop.
+
+    Args:
+    async_func (coroutine): The asynchronous function to execute.
+    *args: Arguments to pass to the asynchronous function.
+
+    Returns:
+    None
+    """
+    
+    loop = None
+
+    try:
+        loop = asyncio.new_event_loop()
+        loop.run_until_complete(async_func(*args))
+    except:
+        # Close the existing loop if open
+        if loop is not None:
+            loop.close()
+
+        # Create a new loop for retry
+        loop = asyncio.new_event_loop()
+
+        loop.run_until_complete(async_func(*args))
+    finally:
+        if loop is not None:
+            loop.close()
+
+
 async def install_micro_async():
     try:
         import micropip
@@ -10,7 +42,8 @@ async def install_micro_async():
         return 'w/ micro'
     except ImportError:
         return 'w/o micro'
-a = asyncio.run(install_micro_async())
+run_async_task(install_micro_async())
+# a = asyncio.run(install_micro_async())
 
 import geopandas
 import folium
