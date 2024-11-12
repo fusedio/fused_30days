@@ -12,7 +12,7 @@ Paste a URL to your favorite `.png` image below and see it get processed to H3.
 This app calls the ["Hexify Image"](https://www.fused.io/workbench/catalog/Hexify_Image-b817f7fd-cd52-40d3-a601-d0fcc36d0f86) UDF by [Jennings Anderson](https://www.linkedin.com/in/jenningsanderson/). The H3 resolution and URL of your image are passed as input parameters to the UDF.
 """)
 
-h3_res = st.selectbox("H3 resolution", [5,6,7,8,9])
+h3_res = st.selectbox("H3 resolution", [9,8,7,6,5])
 
 image_url = st.text_input('URL of image to Hexify:', value="https://fused-magic.s3.us-west-2.amazonaws.com/thumbnails/udfs-staging/jennings.png")
 
