@@ -1,13 +1,6 @@
-# This is a streamlit app code
-import numpy as np
-import pandas as pd
-import pyproj
-from shapely.geometry import Point, mapping
-from shapely.ops import transform
 import pydeck as pdk
 import streamlit as st
 import geopandas as gpd
-from functools import partial
 
 st.title("Day1 - Point(s)")
 st.sidebar.header("Day 1 - Points")
