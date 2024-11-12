@@ -1,9 +1,9 @@
 import streamlit as st
 
-st.set_page_config(
-    page_title="Fused 30 Days",
-    page_icon="🌎",
-)
+# st.set_page_config(
+#     page_title="Fused 30 Days",
+#     page_icon="🌎",
+# )
 
 st.title("Fused 30 Days App")
 
