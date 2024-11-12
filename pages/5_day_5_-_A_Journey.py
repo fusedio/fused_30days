@@ -2,6 +2,8 @@
 
 import streamlit as st
 
+st.sidebar.header("Day 5 - A Journey")
+
 # Display title and subtitle information
 st.title("British Trans-Arctic Expedition")
 

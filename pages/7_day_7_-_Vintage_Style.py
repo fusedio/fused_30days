@@ -2,6 +2,8 @@
 
 import streamlit as st
 
+st.sidebar.header("Day 7 - Vintage Map")
+
 # Display title and subtitle information
 st.title("Frodo and Sam's Journey")
 
