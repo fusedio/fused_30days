@@ -16,8 +16,8 @@ st.markdown(
     """
 )
 
+deck = st.empty()
 percentage_slider = st.slider("Highest percentage ranked of countries", 0, 100, 5)
-st.write(f"Slider value: {percentage_slider=}")
 
 view_state = pdk.ViewState(
     latitude=0,
@@ -26,13 +26,22 @@ view_state = pdk.ViewState(
     pitch=0
 )
 
+initial_deck = pdk.Deck(
+    initial_view_state=view_state,
+    map_style='mapbox://styles/mapbox/light-v9'
+)
+deck.pydeck_chart(initial_deck)
+
 @st.cache_resource
-def fetch_data(percent = percentage_slider):
-    gdf = fused.run("fsh_49hXAtlrDDHr2MFvLBHlLW", highest_percentage=percent)
+def fetch_data():
+    gdf = fused.run("fsh_49hXAtlrDDHr2MFvLBHlLW")
     return gdf
 
-gdf = fetch_data(percentage_slider)
-st.write(f"Recieved gdf: {gdf.shape=}")
+gdf = fetch_data()
+
+# Slicing in frontend, 
+highest_rank = int((gdf.shape[0] * percentage_slider) / 100)
+gdf = gdf[gdf['hdi_rank_2021'] < highest_rank]
 
 geojson_layer = pdk.Layer(
     'GeoJsonLayer',
@@ -47,11 +56,11 @@ geojson_layer = pdk.Layer(
     get_line_width=2,
 )
 
-deck = pdk.Deck(
+updated_deck = pdk.Deck(
     layers=[geojson_layer],
     initial_view_state=view_state,
     map_style='mapbox://styles/mapbox/light-v9'
 )
 
-# Display the map in Streamlit
-st.pydeck_chart(deck)
+# Display the updated map in Streamlit
+deck.pydeck_chart(updated_deck)
