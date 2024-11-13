@@ -4,10 +4,6 @@ import asyncio
 import pydeck as pdk
 from requests.models import PreparedRequest
 
-import geopandas
-import folium
-from streamlit_folium import st_folium
-
 st.sidebar.header("Day 8 - Data (HDX)")
 st.title("2021 Humanitarian Developlment Index per country")
 st.markdown(
@@ -64,3 +60,9 @@ updated_deck = pdk.Deck(
 
 # Display the updated map in Streamlit
 deck.pydeck_chart(updated_deck)
+
+st.write(
+    """
+    This app was made by [Max Lenormand](https://www.linkedin.com/in/maxime-lenormand-b94640107/)
+    """
+)

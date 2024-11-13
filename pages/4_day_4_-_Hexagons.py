@@ -43,3 +43,9 @@ view_state = pdk.ViewState(latitude=0.4, longitude=0.5, zoom=8, bearing=10, pitc
 # Render
 r = pdk.Deck(layers=[layer], initial_view_state=view_state)
 event = st.pydeck_chart(r)
+
+st.write(
+    """
+    This app was made by [Jennings Anderson](https://www.linkedin.com/in/jenningsanderson/)
+    """
+)

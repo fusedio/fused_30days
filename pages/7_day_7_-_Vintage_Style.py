@@ -156,3 +156,9 @@ html_code = """
 
 # Create an iframe to display the HTML code
 st.components.v1.html(html_code, height=600, scrolling=True)
+
+st.write(
+    """
+    This app was made by [Marko Letic](https://www.linkedin.com/in/marko-letic/)
+    """
+)

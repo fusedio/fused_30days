@@ -1,21 +1,10 @@
 import streamlit as st
 import asyncio
 
-# st.set_page_config(page_title="NAIP - areas with high NDVI")
 st.sidebar.header("Day 6 - Raster")
 
 st.title("NAIP - areas with high NDVI")
 st.markdown("This app uses the [NAIP UDF](https://www.fused.io/workbench/catalog/NAIP_Tile_Example-dde0d24a-381d-47e2-a684-f910e147efc1) in a split-screen map, areas highlighted on the right have high NDVI.")
-
-# async def install_micro_async():
-#     try:
-#         import micropip
-#         await micropip.install("streamlit-folium")
-#         return 'Using micropip'
-#     except ImportError:
-#         return 'Not using micropip'
-
-# a = asyncio.run(install_micro_async())
 
 import folium
 from streamlit_folium import st_folium
@@ -38,3 +27,9 @@ sbs = SideBySideLayers(left_layer, right_layer)
 sbs.add_to(m)
 
 st_folium(m, height=700, key="map3", use_container_width=True)
+
+st.write(
+    """
+    This app was made by [Isaac Brodsky](https://www.linkedin.com/in/isaacbrodsky/)
+    """
+)

@@ -103,3 +103,9 @@ updated_deck = pdk.Deck(
 
 # Display the updated map in Streamlit
 deck.pydeck_chart(updated_deck)
+
+st.write(
+    """
+    This app was made by [Isaac Brodsky](https://www.linkedin.com/in/isaacbrodsky/)
+    """
+)

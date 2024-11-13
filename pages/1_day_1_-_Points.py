@@ -82,3 +82,9 @@ updated_layer = pdk.Deck(
     map_style='mapbox://styles/mapbox/light-v9'
 )
 st.pydeck_chart(updated_layer)
+
+st.write(
+    """
+    This app was made by [Max Lenormand](https://www.linkedin.com/in/maxime-lenormand-b94640107/)
+    """
+)
