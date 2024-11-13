@@ -5,7 +5,7 @@ import streamlit as st
 
 st.sidebar.header("Day 12 - Time and Space")
 
-st.title("Day 12 - 🚧 Under construction 🚧")
+st.title("Day 12 - Time and Space")
 
 st.write(
     """
