@@ -10,7 +10,8 @@ This is a collection of [Fused apps](https://docs.fused.io/workbench/app-builder
 
 <!-- https://www.fused.io/workbench/apps#app/s/i/fa_5HnNUZU1V8lNWmB7U7jw6R -->
 <!-- https://www.fused.io/workbench/apps#app/s/i/fa_5TmHebwz0QwH7z1L1iiaYz -->
-You can explore this from your browser [right here](https://www.fused.io/workbench/apps#app/s/i/fa_5TmHebwz0QwH7z1L1iiaYz)!
+<!-- https://www.fused.io/workbench/apps#app/s/i/fa_37DDydakBarFQjd4JBN6MD -->
+You can explore this from your browser [right here](https://www.fused.io/workbench/apps#app/s/i/fa_37DDydakBarFQjd4JBN6MD)!
 
 <!-- Would be nice to add a video once the Fused app is live? -->
 
