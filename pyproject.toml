@@ -21,6 +21,7 @@ pyproj = "^3.7.0"
 shapely = "^2.0.6"
 imageio = "^2.36.0"
 matplotlib = "^3.9.2"
+pydeck-carto = "^0.2.0"
 
 
 [build-system]
