@@ -5,7 +5,7 @@ import streamlit as st
 import pydeck as pdk
 import fused
 
-st.sidebar.header("Day 2 - Lines")
+# st.sidebar.header("Day 2 - Lines")
 
 st.title("Day 2 - Lines")
 

@@ -2,7 +2,7 @@ import streamlit as st
 import pydeck as pdk
 import fused
 
-st.sidebar.header("Day 4 - Hexagons")
+# st.sidebar.header("Day 4 - Hexagons")
 
 st.title("🖼️ Hexify any image!")
 

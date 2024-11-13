@@ -3,7 +3,7 @@ import streamlit as st
 import geopandas as gpd
 
 st.title("Day1 - Point(s)")
-st.sidebar.header("Day 1 - Points")
+# st.sidebar.header("Day 1 - Points")
 
 st.write(
     """

@@ -4,7 +4,7 @@ import asyncio
 import pydeck as pdk
 from requests.models import PreparedRequest
 
-st.sidebar.header("Day 8 - Data (HDX)")
+# st.sidebar.header("Day 8 - Data (HDX)")
 st.title("2021 Humanitarian Developlment Index per country")
 st.markdown(
     """
