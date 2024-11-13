@@ -1,16 +1,8 @@
 import streamlit as st
 
-# st.set_page_config(
-#     page_title="Fused 30 Days",
-#     page_icon="🌎",
-# )
-
 st.title("Fused 30 Days App")
-
 st.write("# Welcome to the Fused 30 Day Map Challenge page! 👋")
-
 st.sidebar.success("Select a demo above.")
-
 st.markdown(
     """
     [Fused](https://www.fused.io/) is an end-to-end cloud platform for data analytics.
