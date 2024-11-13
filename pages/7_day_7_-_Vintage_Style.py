@@ -2,8 +2,6 @@
 
 import streamlit as st
 
-st.sidebar.header("Day 7 - Vintage Map")
-
 # Display title and subtitle information
 st.title("Frodo and Sam's Journey")
 
@@ -156,3 +154,9 @@ html_code = """
 
 # Create an iframe to display the HTML code
 st.components.v1.html(html_code, height=600, scrolling=True)
+
+st.write(
+    """
+    This app was made by [Marko Letic](https://www.linkedin.com/in/marko-letic/)
+    """
+)

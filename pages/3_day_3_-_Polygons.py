@@ -1,55 +1,52 @@
-# This is a streamlit app code
-import numpy as np
-import pandas as pd
 import streamlit as st
-
-# Us this datapoints: https://www.fused.io/workbench/catalog/FEMA_Buildings_US-ae1feed0-215a-42b5-8cf4-d95f5c1216dc
-st.sidebar.header("Day 3 - Polygons")
 
 st.title("Day 3 - Explore Building Size Distributions")
 st.write(
     """
-    This app allows you to look at the distribution of the largest buildings
+    This app allows you to look at the distribution of the largest buildings!
+
+    We're using data from Oak Ridge National Laboratory and FEMA. [Find more info here](https://tech.marksblogg.com/ornl-fema-buildings.html)
     """
 )
 
 bbox=[-122.449, 37.781, -122.341, 37.818]
 
-
-#sina.py
 import json
 import fused
 import streamlit as st
-import asyncio
 import pydeck as pdk
 import pydeck_carto as pdkc
-from requests.models import PreparedRequest
-
-import geopandas
-import folium
-from streamlit_folium import st_folium
 
 
 @st.cache_resource
 def fetch_data(bbox):
     gdf = fused.run("UDF_FEMA_Buildings_US", bbox=bbox)
     return gdf
-gdf = fetch_data(bbox)#.sample(10_000)
+gdf = fetch_data(bbox)
 
-st.write(gdf.head())
 centroid_x = gdf.centroid.x.mean()
 centroid_y = gdf.centroid.y.mean()
 
 largest_area = gdf['SQMETERS'].max()
-st.write(f"{largest_area=}")
 
 deck = st.empty()
+categories = [
+    "Assembly",
+    "Commercial",
+    "Utility and Misc",
+    "Residential",
+    "Industrial",
+    "Education",
+    "Government"
+]
+selected_category = st.selectbox("Choose a category:", ['All'] + categories)
+if selected_category != 'All':
+    gdf = gdf[gdf['OCC_CLS'] == selected_category]
 
-percentage_slider = st.slider("Buidling area percentile to keep", 0, 100, 5)
+percentage_slider = st.slider("Only keep the top percentile of building area:", 0, 100, 100)
 area_threshold = percentage_slider * largest_area / 100
 
-gdf = gdf[gdf["SQMETERS"] > area_threshold]
-st.write(f"{gdf.shape=}")
+gdf = gdf[gdf["SQMETERS"] < area_threshold]
 
 view_state = pdk.ViewState(
     latitude=centroid_y,
@@ -93,3 +90,9 @@ updated_deck = pdk.Deck(
 
 # Display the updated map in Streamlit
 deck.pydeck_chart(updated_deck)
+
+st.write(
+    """
+    This app was made by [Sina Kashuk](https://www.linkedin.com/in/skashuk/)
+    """
+)

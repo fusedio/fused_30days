@@ -2,8 +2,6 @@
 
 import streamlit as st
 
-st.sidebar.header("Day 5 - A Journey")
-
 # Display title and subtitle information
 st.title("British Trans-Arctic Expedition")
 
@@ -166,3 +164,9 @@ html_code = """
 
 
 st.components.v1.html(html_code, height=600, scrolling=True)
+
+st.write(
+    """
+    This app was made by [Marko Letic](https://www.linkedin.com/in/marko-letic/)
+    """
+)
