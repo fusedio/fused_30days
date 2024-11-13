@@ -23,8 +23,11 @@ view_state = pdk.ViewState(
     pitch=0
 )
 
-gdf = fused.run("fsh_6N7iGIajMqacxK5fBJeW4k")
+@st.cache_data
+def get_data():
+    return fused.run("fsh_6N7iGIajMqacxK5fBJeW4k")
 
+gdf = get_data()
 
 # Define the color style as a dictionary
 style = {
