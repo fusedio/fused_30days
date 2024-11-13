@@ -34,22 +34,22 @@ from streamlit_folium import st_folium
 def fetch_data(bbox):
     gdf = fused.run("UDF_FEMA_Buildings_US", bbox=bbox)
     return gdf
-gdf = fetch_data(bbox)#.sample(10_000)
+gdf = fetch_data(bbox)
 
-st.write(gdf.head())
+# st.write(gdf.head())
 centroid_x = gdf.centroid.x.mean()
 centroid_y = gdf.centroid.y.mean()
 
 largest_area = gdf['SQMETERS'].max()
-st.write(f"{largest_area=}")
+# st.write(f"{largest_area=}")
 
 deck = st.empty()
 
-percentage_slider = st.slider("Buidling area percentile to keep", 0, 100, 5)
+percentage_slider = st.slider("Only keep the top percentile of building area:", 0, 100, 25)
 area_threshold = percentage_slider * largest_area / 100
 
 gdf = gdf[gdf["SQMETERS"] > area_threshold]
-st.write(f"{gdf.shape=}")
+# st.write(f"{gdf.shape=}")
 
 view_state = pdk.ViewState(
     latitude=centroid_y,
