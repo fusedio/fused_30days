@@ -23,8 +23,6 @@ st.markdown(
 
     👈 You can explore each of these apps yourself. You can inspect the code for each one of those 
 
-    🚧 We'll add a video on how to do this soon, stay tuned 🚧
-
     ### Want to learn more?
     - Check out [our docs](https://docs.fused.io/)
     - Join [our waitlist](https://docs.google.com/forms/d/1NVzMjc2tXxlIgnFrxqQPM_NtG1B2AQ0En_pAbZHYSK0)
