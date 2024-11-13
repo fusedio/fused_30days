@@ -1,7 +1,4 @@
 import streamlit as st
-import asyncio
-
-# st.sidebar.header("Day 6 - Raster")
 
 st.title("NAIP - areas with high NDVI")
 st.markdown("This app uses the [NAIP UDF](https://www.fused.io/workbench/catalog/NAIP_Tile_Example-dde0d24a-381d-47e2-a684-f910e147efc1) in a split-screen map, areas highlighted on the right have high NDVI.")

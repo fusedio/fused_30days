@@ -2,10 +2,7 @@ import streamlit as st
 import pydeck as pdk
 import fused
 
-# st.sidebar.header("Day 4 - Hexagons")
-
 st.title("🖼️ Hexify any image!")
-
 st.markdown("""
 Paste a URL to your favorite `.png` image below and see it get processed to H3.
 

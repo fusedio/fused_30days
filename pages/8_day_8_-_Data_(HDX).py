@@ -1,10 +1,7 @@
 import fused
 import streamlit as st
-import asyncio
 import pydeck as pdk
-from requests.models import PreparedRequest
 
-# st.sidebar.header("Day 8 - Data (HDX)")
 st.title("2021 Humanitarian Developlment Index per country")
 st.markdown(
     """
@@ -35,7 +32,7 @@ def fetch_data():
 
 gdf = fetch_data()
 
-# Slicing in frontend, 
+# Slicing in frontend
 highest_rank = int((gdf.shape[0] * percentage_slider) / 100)
 gdf = gdf[gdf['hdi_rank_2021'] < highest_rank]
 
