@@ -12,6 +12,7 @@ This is a collection of [Fused apps](https://docs.fused.io/workbench/app-builder
 You can explore this from your browser 👉 [right here](https://www.fused.io/workbench/apps#app/s/i/fa_5pTbts2uvCGHfRdnApvAkk)! 👈
 
 <!-- Would be nice to add a video once the Fused app is live? -->
+[![IMAGE ALT TEXT HERE](/imgs/YT_30Day_App_Preview.png)](https://youtu.be/jeSaERemEtQ)
 
 ### Quickstart (local)
 
