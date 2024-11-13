@@ -9,9 +9,10 @@ All throughout the month of November we're going to add contribution from the Fu
 This is a collection of [Fused apps](https://docs.fused.io/workbench/app-builder/) that you can explore to see various uses of Fused, from [User Defined Functions](https://docs.fused.io/core-concepts/why/) to various Fused apps
 
 
-You can explore this from your browser 👉 [right here](https://www.fused.io/workbench/apps#app/s/i/fa_5pTbts2uvCGHfRdnApvAkk)! 👈
+You can explore this from your browser 👉 [right here](https://www.fused.io/workbench/apps#app/s/i/fa_2IoefFoGFI1QL0Fiq4gSML)! 👈
 
 <!-- Would be nice to add a video once the Fused app is live? -->
+[![IMAGE ALT TEXT HERE](/imgs/YT_30Day_App_Preview.png)](https://youtu.be/jeSaERemEtQ)
 
 ### Quickstart (local)
 
